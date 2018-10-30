@@ -1,7 +1,6 @@
 # Project Overview
-## as part of [Udacity](https://www.udacity.com/)'s 'Grow with Google - FEND'
 
-In this project I was given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/), however, I was expected to revise and finish adding all necessary suites/specs.
+In [Udacity](https://www.udacity.com/)'s 'Grow with Google - FEND' program I was given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/), however, I was expected to revise and finish adding all necessary suites/specs.
 
 # Getting Started
 
@@ -10,12 +9,15 @@ In this project I was given a web-based application that reads RSS feeds. The or
 - Jasmine tests will automatically run, you can see the results at the bottom of the webpage.
 - Edit and add tests to your heart's content in the `/jasmine/spec/feedreader.js` file!
 
-# Why TDD (as described by [Udacity](https://www.udacity.com/))
+# Why TDD?
+
+According to [Udacity](https://www.udacity.com/):
 
 "Testing is an important part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass."
 
-# Exact Requirements for this project
-## as specified by [Udacity](https://www.udacity.com/)
+# Want to attempt this assignment too?
+
+According to [Udacity](https://www.udacity.com/):
 
 Review the Feed Reader Testing [Project Rubric](https://review.udacity.com/#!/projects/3442558598/rubric)
 
