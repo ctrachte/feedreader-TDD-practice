@@ -52,18 +52,45 @@ $(function() {
 
 
     /* TODO: Write a new test suite named "The menu" */
-    describe('RSS Feeds', function() {
+    describe('The Menu', function() {
       /* TODO: Write a test that ensures the menu element is
        * hidden by default. You'll have to analyze the HTML and
        * the CSS to determine how we're performing the
        * hiding/showing of the menu element.
        */
-
+       it('should be hidden by default', function() {
+         let body = document.getElementsByTagName('body');
+         let menuStatus = body[0].className;
+         expect(body).not.toBe(null);
+         expect(menuStatus).toBe('menu-hidden');
+       });
        /* TODO: Write a test that ensures the menu changes
         * visibility when the menu icon is clicked. This test
         * should have two expectations: does the menu display when
         * clicked and does it hide when clicked again.
         */
+        it('should show or hide on click', function() {
+          //test default value of menu class name
+          let body = document.getElementsByTagName('body');
+          let menuStatus = body[0].className;
+          expect(body).not.toBe(null);
+          expect(menuStatus).toBe('menu-hidden');
+          // now trigger a click and check again
+          let menuIcon = document.getElementsByClassName('menu-icon-link')[0];
+          menuIcon.click();
+          body = document.getElementsByTagName('body');
+          menuStatus = body[0].className;
+          //body should no longer have a class of "menu-hidden"
+          expect(body).not.toBe(null);
+          expect(menuStatus).toBe('');
+          // Now lets click one more time to see if it hides again
+          menuIcon.click();
+          body = document.getElementsByTagName('body');
+          menuStatus = body[0].className;
+          //body should have a class of "menu-hidden" once again
+          expect(body).not.toBe(null);
+          expect(menuStatus).toBe('menu-hidden');
+        });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
