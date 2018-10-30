@@ -1,4 +1,4 @@
-# Project Overview (as part of the 'Grow with Google - FEND')
+# Project Overview (as part of [Udacity](https://www.udacity.com/)'s 'Grow with Google - FEND')
 
 In this project I was given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/), however, I was expected to revise and finish adding all necessary suites/specs.
 
