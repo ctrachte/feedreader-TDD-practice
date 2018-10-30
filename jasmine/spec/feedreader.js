@@ -102,9 +102,10 @@ $(function() {
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
        let entries;
+       // first lets load the second feed and save it in a variable
        beforeEach((done) => {
            loadFeed(1, function (){
-               entries = $('.feed .entry').length;
+               entries = document.getElementsByClassName('feed').length;
                done();
            });
 
