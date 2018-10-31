@@ -82,14 +82,14 @@ $(function() {
           menuStatus = body[0].className;
           //body should no longer have a class of "menu-hidden"
           expect(body).not.toBe(null);
-          expect(menuStatus).toBe('');
+          expect(menuStatus).not.toContain('menu-hidden');
           // Now lets click one more time to see if it hides again
           menuIcon.click();
           body = document.getElementsByTagName('body');
           menuStatus = body[0].className;
           //body should have a class of "menu-hidden" once again
           expect(body).not.toBe(null);
-          expect(menuStatus).toBe('menu-hidden');
+          expect(menuStatus).toContain('menu-hidden');
         });
     });
 
@@ -101,23 +101,18 @@ $(function() {
        * Remember, loadFeed() is asynchronous so this test will require
        * the use of Jasmine's beforeEach and asynchronous done() function.
        */
-       let entries;
-       // first lets load the second feed and save it in a variable
+       // first lets load the second feed
        beforeEach((done) => {
-           loadFeed(1, function (){
-               entries = document.getElementsByClassName('feed').length;
-               done();
-           });
-
+         loadFeed(1, done);
        });
 
        it('should return at least one entry', function() {
 
          // the result should exist and not be undefined
-         expect(entries).toBeDefined();
-         expect(entries).not.toBe(null);
+         expect($('.feed .entry').length).toBeDefined();
+         expect($('.feed .entry').length).not.toBe(null);
          //there should be multiple entries returned
-         expect(entries).toBeGreaterThan(0);
+         expect($('.feed .entry').length).toBeGreaterThan(0);
        });
     })
 
@@ -136,12 +131,12 @@ $(function() {
          //then store the first element of each in a variable.
            loadFeed(0, () => {
                firstFeed = document.getElementsByClassName('feed')[0].innerHTML;
+               loadFeed(1, () => {
+                   secondFeed = document.getElementsByClassName('feed')[0].innerHTML;
+                   done();
+               });
            });
 
-           loadFeed(1, () => {
-               secondFeed = document.getElementsByClassName('feed')[0].innerHTML;
-               done();
-           });
        });
 
        it('should change the entries based on which feed is loaded', function() {
