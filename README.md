@@ -2,7 +2,7 @@
 
 In [Udacity](https://www.udacity.com/)'s 'Grow with Google - FEND' program I was given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/), however, I was expected to revise and finish adding all necessary suites/specs.
 
-# Getting Started
+# To Run this Project:
 
 - Download the repository using `git clone` or by clicking the `clone or download button` for this repository
 - Start `index.html` in your browser of choice
@@ -15,7 +15,7 @@ According to [Udacity](https://www.udacity.com/):
 
 "Testing is an important part of the development process and many organizations practice a standard of development known as "test-driven development". This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass."
 
-# Want to attempt this assignment too?
+## Want to attempt this assignment from scratch?
 
 According to [Udacity](https://www.udacity.com/):
 
